@@ -1,12 +1,12 @@
 <?php
 
-namespace BendeckDavid\GraphqlClient\Classes;
+namespace RaphaelCangucu\GqlClient\Classes;
 
 use Exception;
 use Illuminate\Support\Arr;
-use BendeckDavid\GraphqlClient\Enums\Format;
-use BendeckDavid\GraphqlClient\Enums\Request;
-use BendeckDavid\GraphqlClient\Classes\Mutator;
+use RaphaelCangucu\GqlClient\Enums\Format;
+use RaphaelCangucu\GqlClient\Enums\Request;
+use RaphaelCangucu\GqlClient\Classes\Mutator;
 
 class Client extends Mutator {
 

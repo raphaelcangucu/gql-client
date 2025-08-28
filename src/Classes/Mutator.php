@@ -1,6 +1,6 @@
 <?php
 
-namespace BendeckDavid\GraphqlClient\Classes;
+namespace RaphaelCangucu\GqlClient\Classes;
 
 use BadMethodCallException;
 use Illuminate\Support\Str;

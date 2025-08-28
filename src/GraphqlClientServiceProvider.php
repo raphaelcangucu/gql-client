@@ -1,9 +1,9 @@
 <?php
 
-namespace BendeckDavid\GraphqlClient;
+namespace RaphaelCangucu\GqlClient;
 
 use Illuminate\Support\ServiceProvider;
-use BendeckDavid\GraphqlClient\Classes\Client;
+use RaphaelCangucu\GqlClient\Classes\Client;
 
 class GraphqlClientServiceProvider extends ServiceProvider
 {
