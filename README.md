@@ -1,19 +1,25 @@
 
-# Minimal GraphQL Laravel Client
+# GraphQL Laravel Client
 
-Minimal GraphQL client for Laravel.
+A minimal GraphQL client for Laravel applications. This package is a continuation of the original work by David Gutierrez (BendeckDavid), who has discontinued this project. We've updated it with the latest dependencies, comprehensive testing, and continued maintenance under the new namespace.
 
+## Credits
+
+**Original Author:** David Gutierrez [@bendeckdavid](https://www.github.com/bendeckdavid)
+
+This package is based on the original `bendeckdavid/graphql-client` package. All core functionality and design patterns are credited to the original author. This fork continues development with bug fixes, updates, and improvements.
 
 ## Requirements
 
+- PHP ^8.0
+- Laravel ^8.0|^9.0|^10.0|^11.0
 - Composer 2+
-
 
 ## Installation
 
 Install Package (Composer 2+)
 ```bash
-composer require bendeckdavid/graphql-client
+composer require raphaelcangucu/gql-client
 ```
 
 
@@ -48,7 +54,7 @@ GRAPHQL_AUTHENTICATION="bearer"
 
 Import GraphQL Client Facades
 ```php
-use BendeckDavid\GraphqlClient\Facades\GraphQL;
+use RaphaelCangucu\GqlClient\Facades\GraphQL;
 ```
 
 Basic use
@@ -68,9 +74,9 @@ return GraphQL::query('
 //->get('json'); //get response as json object
 ```
 
-Mutator request:
+Mutation request:
 ```php
-return GraphQL::mutator('
+return GraphQL::mutation('
     insert_user(name: "David") {
         id
         name
@@ -80,7 +86,7 @@ return GraphQL::mutator('
 //->get('json');
 ```
 
-You can access "query" or "mutator" as a shortcut if you are not passing variables, if is not the case you must use the "raw" attribute:
+You can access "query" or "mutation" as a shortcut if you are not passing variables, if is not the case you must use the "raw" attribute:
 
 ```php
 return GraphQL::raw('
@@ -157,19 +163,53 @@ return GraphQL::query($query)
   ])->get();
 ```
 
+## Testing
 
-## Author
+This package comes with comprehensive test coverage. Run tests using:
 
-- David Gutierrez [@bendeckdavid](https://www.github.com/bendeckdavid)
+```bash
+composer test
+```
 
+For coverage reports:
+```bash
+composer test-coverage
+```
 
-## Top Contributors ⭐
+## Configuration Publishing
 
+Publish the configuration file to customize authentication and endpoint settings:
+
+```bash
+php artisan vendor:publish --provider="RaphaelCangucu\GqlClient\GraphqlClientServiceProvider" --tag="config"
+```
+
+## What's New in This Fork
+
+- Updated to support PHP 8.0+ and Laravel 8-11
+- Comprehensive test suite with 40+ tests
+- Updated dependencies and security improvements
+- Fixed deprecated method names (`mutator` → `mutation`)
+- Improved error handling and documentation
+- Full namespace migration for modern Laravel applications
+
+## Original Author & Contributors
+
+**Original Author:** David Gutierrez [@bendeckdavid](https://www.github.com/bendeckdavid)
+
+**Original Top Contributors:**
 - Ehsan Quddusi [@ehsanquddusi](https://github.com/ehsanquddusi)
 
-## Contributors
-
+**Original Contributors:**
 - Ryan Mayberry [@kerkness](https://github.com/kerkness)
 - Jamie Duong [@chiendv](https://github.com/chiendv)
+
+## Current Maintainer
+
+- Raphael Cangucu [@raphaelcangucu](https://github.com/raphaelcangucu)
+
+## License
+
+This project maintains the same license as the original package.
 
 
