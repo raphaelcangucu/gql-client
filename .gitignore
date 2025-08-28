@@ -1,0 +1,21 @@
+# Dependencies
+vendor/
+
+# Testing
+coverage/
+phpunit.xml
+.phpunit.result.cache
+.phpunit.cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

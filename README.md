@@ -12,7 +12,7 @@ This package is based on the original `bendeckdavid/graphql-client` package. All
 ## Requirements
 
 - PHP ^8.0
-- Laravel ^8.0|^9.0|^10.0|^11.0
+- Laravel ^8.0|^9.0|^10.0|^11.0|^12.0
 - Composer 2+
 
 ## Installation
@@ -186,7 +186,8 @@ php artisan vendor:publish --provider="RaphaelCangucu\GqlClient\GraphqlClientSer
 
 ## What's New in This Fork
 
-- Updated to support PHP 8.0+ and Laravel 8-11
+- Updated to support PHP 8.0+ and Laravel 8-12
+- Laravel 12 compatibility added in version 0.2.0
 - Comprehensive test suite with 40+ tests
 - Updated dependencies and security improvements
 - Fixed deprecated method names (`mutator` → `mutation`)
